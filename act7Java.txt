@@ -1,0 +1,42 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a = 0;
+        int b = 1;
+        int c, n;
+
+        System.out.print("Cuantos elementos incluir en la serie? ");
+        n = sc.nextInt();
+
+        System.out.println("Fibonacci:");
+        for (int i = 0; i < n; i++) {
+            System.out.println(a);
+            c = a + b;
+            a = b;
+            b = c;
+        }
+
+        System.out.println("Nueros primos:");
+        int h = 1;
+        int e = 2;
+        int d = 2;
+        while (h <= n) {
+            if (e % d == 0) {
+                if (e == d) {
+                    System.out.print(e + ", ");
+                    h++;
+                }
+                d = 2;
+                e++;
+            } else {
+                d++;
+            }
+        }
+    }
+}
